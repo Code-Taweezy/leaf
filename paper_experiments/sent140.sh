@@ -5,7 +5,7 @@ OUTPUT_DIR=${1:-"./baseline"}
 # Each value is (k, seed) pair
 declare -a k_vals=( "100 1549774894" "30 1549775083" "10 1549775860" "3 1549780473" )
 
-###################### Functions ###################################
+#Functions 
 
 function get_k_data() {
 	keep_clients="${1?Please provide value of keep_clients}"
@@ -39,7 +39,7 @@ function run_k() {
 	move_data ${OUTPUT_DIR} "k_${k}"
 }
 
-###################### Script ########################################
+# Script 
 pushd ../
 
 if [ ! -d "data/" -o ! -d "models/" ]; then
